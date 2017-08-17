@@ -4,6 +4,7 @@
 
 $primary: mat-palette($mat-red);
 $accent: mat-palette($mat-blue);
+$title: color(white);
 
 $theme: mat-light-theme($primary, $accent);
 
