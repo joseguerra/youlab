@@ -1,0 +1,38 @@
+<h3>Ver Examenes</h3>
+     <form #form="ngForm" (ngSubmit)="ver(form.value)" ngNativeValidate>
+
+
+ <date-picker ngModel name="picker"></date-picker>
+
+
+  <md-dialog-actions align="end">
+    <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button md-button color="accent"> Buscar</button>
+  </md-dialog-actions>
+</form>
+
+<br/>
+
+
+   <md-card class="example-card" *ngFor="let examen of examenes">
+    <md-card-header>
+      <md-card-title>
+         {{examen.name}} {{examen.lastName}} - {{examen.cedula}}
+      </md-card-title>
+    </md-card-header>
+
+    <md-card-content *ngFor="let item of examen.examenes">
+      {{item}}
+    </md-card-content> 
+  </md-card>
+
+      <div class="card-block"  *ngIf="mensaje">
+        No se encontro ningun usuario
+    </div>
+
+    <md-progress-spinner *ngIf="prueba"
+        class="example-margin"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+    </md-progress-spinner>

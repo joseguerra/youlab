@@ -1,0 +1,44 @@
+<h3>Editar Paciente</h3>
+
+
+    <form #form="ngForm" (ngSubmit)="dialogRef.close(form.value)" ngNativeValidate>
+     <table class="example-full-width" cellspacing="0">
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput  [(ngModel)]="data.name" name="name" placeholder="Nombre" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput [(ngModel)]="data.lastName" name="lastName" placeholder="Apellido" required>
+              </md-input-container>
+          </td>
+       </tr>
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput [(ngModel)]="data.telephone" name="telephone" placeholder="Telefono" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput [(ngModel)]="data.date" name="date" placeholder="Fecha de nacimiento" required>
+              </md-input-container>
+          </td>
+       </tr>
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput [(ngModel)]="data.address" name="address" placeholder="Dirección" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput [(ngModel)]="data.email" name="email" placeholder="Email" required>
+              </md-input-container>
+          </td>
+       </tr>
+
+     </table>
+  <md-dialog-actions align="end">
+    <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button md-button color="accent" (click)="save()">Save User</button>
+  </md-dialog-actions>
+</form>
+
+

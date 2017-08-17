@@ -1,0 +1,24 @@
+<h3>Editar Examen</h3>
+
+
+    <form #form="ngForm" (ngSubmit)="dialogRef.close(form.value)" ngNativeValidate>
+     <table class="example-full-width" cellspacing="0">
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput  [(ngModel)]="data.name" name="name" placeholder="Nombre" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput [(ngModel)]="data.precio" name="precio" placeholder="Precio" required>
+              </md-input-container>
+          </td>
+       </tr>
+
+     </table>
+  <md-dialog-actions align="end">
+    <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button md-button color="accent" (click)="save()">Save User</button>
+  </md-dialog-actions>
+</form>
+
+

@@ -1,0 +1,36 @@
+<h3>Agregar Examen</h3>
+
+
+    <form #form="ngForm" (ngSubmit)="save(form.value)" ngNativeValidate>
+     <table class="example-full-width" cellspacing="0">
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput  ngModel name="name" placeholder="Nombre" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput ngModel name="precio" placeholder="Precio" required>
+              </md-input-container>
+          </td>
+       </tr>
+
+       <tr>
+          <td>
+            <md-select placeholder="Categoria" [(ngModel)]="selectedValue" name="categoria">
+                <md-option *ngFor="let categoria of categorias" [value]="categoria.value">
+                  {{categoria.value}}
+                </md-option>
+              </md-select>
+          </td>
+       </tr>
+
+
+       
+     </table>
+  <md-dialog-actions align="end">
+    <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button md-button color="accent">Save User</button>
+  </md-dialog-actions>
+</form>
+
+

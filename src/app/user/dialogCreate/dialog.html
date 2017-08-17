@@ -1,0 +1,51 @@
+<h3>Agregar Paciente</h3>
+
+
+    <form #form="ngForm" (ngSubmit)="save(form.value)" ngNativeValidate>
+     <table class="example-full-width" cellspacing="0">
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput  ngModel name="name" placeholder="Nombre" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput ngModel name="lastName" placeholder="Apellido" required>
+              </md-input-container>
+          </td>
+       </tr>
+       <tr>
+          <td><md-input-container class="example-full-width" (focusout)="focusOutFunction()">
+                <input mdInput [(ngModel)]="cedula" name="cedula" placeholder="Cedula" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput ngModel name="date" placeholder="Fecha de nacimiento" required>
+              </md-input-container>
+          </td>
+       </tr>
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput ngModel name="address" placeholder="Dirección" required>
+              </md-input-container>
+          </td>
+          <td><md-input-container class="example-full-width">
+                <input mdInput ngModel name="email" placeholder="Email" required>
+              </md-input-container>
+          </td>
+       </tr>
+       <tr>
+          <td><md-input-container class="example-full-width">
+                <input mdInput ngModel name="telephone" placeholder="Telefono" required>
+              </md-input-container>
+          </td>
+       </tr>
+
+     </table>
+  <p *ngIf="valido" class="colorRed">Esa cedula ya existe</p>
+  <md-dialog-actions align="end">
+    <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button md-button color="accent" [disabled]="valido">Save User</button>
+  </md-dialog-actions>
+</form>
+
+

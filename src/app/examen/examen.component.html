@@ -1,0 +1,65 @@
+    <div class="card">
+        <div class="card-header">
+            Lista de examenes
+        </div>
+        <md-input-container class="example-full-width">
+            <input mdInput  [(ngModel)]="buscar" placeholder="Buscar examen" >
+        </md-input-container>
+        <button class="btn btn-sm btn-primary" (click)="onBuscar()">
+            <i class="fa fa-pencil fa-fw"></i>    
+            Buscar
+        </button>
+        <button class="btn btn-sm btn-danger" (click)="restablecer()">
+            <i class="fa fa-trash-o fa-fw"></i>    
+            Restablecer
+        </button>     
+        <div class="card-block" *ngIf="!mensaje">
+            <table class="table table-hover">
+                <thead class="thead-default">
+                    <tr>                        
+                        <th >Nombre</th>
+                        <th >Precio</th>
+                        <th>
+                            <button class="btn btn-sm btn-primary" (click)="openAdminDialog()">
+                                <i class="fa fa-pencil fa-fw"></i>    
+                                Crear
+                            </button>
+                            <button class="btn btn-sm btn-danger" (click)="openDialogVerExamen()">
+                                <i class="fa fa-trash-o fa-fw"></i>    
+                                Ver Examenes
+                            </button>   
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of lista">                        
+                        <td>{{item.name}}</td>
+                        <td>{{item.precio}}</td>
+                        <td>
+                            <button class="btn btn-sm btn-primary" (click)="openAdminDialogEdit(item)">
+                                <i class="fa fa-pencil fa-fw"></i>    
+                                Editar
+                            </button>
+                            <button class="btn btn-sm btn-danger" (click)="borrar(item.$key)">
+                                <i class="fa fa-trash-o fa-fw"></i>    
+                                Eliminar
+                            </button>                            
+                                                     
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="card-block"  *ngIf="mensaje">
+            No se encontro ningun usuario
+        </div>
+
+        <md-progress-spinner *ngIf="prueba"
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="value">
+        </md-progress-spinner>
+
+    </div>

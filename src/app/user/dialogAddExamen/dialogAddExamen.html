@@ -1,0 +1,196 @@
+<h3>Agregar Examen</h3>
+
+      <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+              Hematologia completa
+            </md-card-title>
+          </md-card-header>
+      
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='HEMATOLOGIA COMPLETA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+
+        </md-card>
+
+        <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Electrolitos
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='ELECTROLITOS'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Coagulación
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='COAGULACION'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Hormonas
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='HORMONAS'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Química Sanguinea
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='QUIMICA SANGUINEA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Serología
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='SEROLOGIA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Inmunología
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='INMUNOLOGIA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Toxicología
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='TOXICOLOGIA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Uroanalisis
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='UROANALISIS'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Coprología
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='COPROLOGIA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Ferrocinetica
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='FERROCINETICA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+         <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Liquidos Biologicos
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='LIQUIDOS BIOLOGICOS'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+        <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Microbiología
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='MICROBIOLOGIA'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+        <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Biopsias
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='BIOPSIAS'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+        <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Otros
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='OTROS'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+        <md-card class="example-card">
+          <md-card-header>
+            <md-card-title>
+            Liquidos Biologicos
+            </md-card-title>
+          </md-card-header>
+        <md-card-content *ngFor="let item of lista">
+          <md-checkbox *ngIf="item.categoria=='LIQUIDOS BIOLOGICOS'" (click)="cambio(item.name)" class="example-margin">{{item.name}}</md-checkbox> 
+        </md-card-content> 
+        </md-card>
+
+
+        <md-progress-spinner *ngIf="prueba"
+            class="example-margin"
+            [color]="color"
+            [mode]="mode"
+            [value]="value">
+        </md-progress-spinner>
+
+  <md-dialog-actions align="end">
+    <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button md-button color="accent"   [disabled]="examenes.length==0" (click)="save()">Save User</button>
+  </md-dialog-actions>
+
+
+

@@ -1,0 +1,46 @@
+<div fxLayout="column" fxFlex [class.dark-theme]="isDarkTheme">
+
+  <md-toolbar color="primary">
+    <span>Youlab</span>
+
+    <!-- Filler that pushes the menu button to the end of the toolbar -->
+    <span fxFlex></span>
+    <img src="../assets/youlab2.jpeg" width="200px" height="50px">    
+
+
+  </md-toolbar>
+
+  <md-sidenav-container fxFlex>
+    <md-sidenav mode="side" opened>
+
+          <md-nav-list>
+            
+              <md-list-item *ngFor="let object of objects" (click)="selectedUser = user" routerLink="/{{object.routerLink}}">
+           
+                  <md-icon svgIcon="avatars:{{object.avatar}}" class="avatar"></md-icon>
+                  <span>{{object.name}}</span>
+              
+              </md-list-item>
+            
+          </md-nav-list>
+
+
+    </md-sidenav>
+    <div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+
+      <md-card fxFlex="100">
+        <router-outlet></router-outlet>
+      </md-card>
+
+      
+      
+    </div>
+  </md-sidenav-container>
+
+  <md-menu #themeMenu x-position="before">
+    <button md-menu-item (click)="isDarkTheme = !isDarkTheme">Toggle Theme</button>
+  </md-menu>
+
+
+
+</div>
